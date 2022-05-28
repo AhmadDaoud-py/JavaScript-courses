@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challange 26</title>
+</head>
+<body>
+    <h1>Js challanges : challange 25</h1>
+    <div>
+        <p>here is paragraph of text</p>
+    </div>
+    <button>Add paragraph..</button>
+    <button>Remove paragraph..</button>
+    <script>
+        var divp = document.querySelector('div');
+        var btnAdd = document.querySelectorAll('button')[0];
+        var btnRemove = document.querySelectorAll('button')[1];
+        var i = 0;
+        btnAdd.addEventListener('click', function(){
+            var newp = document.createElement('p');
+            i++;
+            var newtxt = document.createTextNode(`A new paragraph has been added ${i}`);
+            
+            newp.appendChild(newtxt);
+            divp.append(newp);
+        });
+        btnRemove.addEventListener('click', function(){
+            var allp = document.querySelectorAll('p');
+            
+            if(allp.length == 1){
+                
+                alert("Don't delete the last paragraph");
+            }
+
+            i--;
+            divp.removeChild(divp.children[allp.length-1]);
+            
+
+        });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challange 23</title>
+</head>
+<body>
+    <h1>Js challanges : challange 23</h1>
+    <p>here is paragraph of text</p>
+    <p>here is paragraph of text 2</p>
+    <p>here is paragraph of text 3</p>
+    <button>Turn Green ..!</button>
+    <script>
+        var par = document.querySelectorAll('p');
+        var btn = document.querySelector('button');
+        btn.onclick = function(){
+            for(var i= 0; i<par.length; i++){
+
+                par[i].style.color = "green";
+            }
+            
+        }
+        /*btn.addEventListener('click', function(){
+            //let i = 0;
+           // par[i].style.color = "green";
+
+           for(var i =0 ; i < par.length; i++){
+
+            par[i].style.color = "green";
+            console.log(i);
+            }
+        });*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <h1>Scope test</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, est.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, est.</p>
+    <script>
+        (function(){
+            "use strict";// use strict is to not define the variable without var keyword
+            var allps= document.querySelectorAll('p');
+            for(var i = 0; i<allps.length ; i++){
+                allps[i].style.color = "red";
+            }
+        }());
+        //console.log(allps); error because its local variable
+        var var1 = "the global variable";
+        function testScope(){
+            oopsGlobal = "what is what";// with no var keyword it's global
+            var var1 = "the local variable";
+            console.log(var1);
+        }
+        testScope();
+        console.log(var1);
+        console.log(oopsGlobal);
+    </script>
+</body>
+</html>

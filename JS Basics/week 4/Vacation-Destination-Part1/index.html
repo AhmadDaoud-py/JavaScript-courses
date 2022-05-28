@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Destinations WishList</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+	    <!-- Our CSS -->
+    <link rel="stylesheet" href="/styles.css">
+        <!-- Our JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Vacation Destinations WishList</h1>
+        <p>Found exciting places to visit on your next vacation?<br>Use the form below to add them to your WishList</p>
+    </header>
+    <main>
+        <form id ="destination_details_form">
+            <label for="name">Destination name</label>
+            <input type="text" id="name" placeholder="Provide a name for this destination" required>
+
+            <label for="location">Location of the destenation</label>
+            <input type="text" id="location" placeholder="Where this destination located" required>
+
+            <label for="photo">Photo</label>
+            <input type="url" id="photo" placeholder="Provide a URL for a Photo">
+
+            <label for="description">Destenation description</label>
+            <textarea id="desription" placeholder="Describe the distination"></textarea>
+
+            <button type="submit">Add to list</button>
+
+        </form>
+        <article>
+            <h2 id="title">Enter the destination details</h2>
+            <div id="destenation_container">
+                <!-- Content genetated by JS -->
+                <div class="card">
+                    <img src="images/signpost.jpg" alt="signpost">
+                    <div class="caed-body">
+                        <h3>Destenation Name</h3>
+                        <h4>Destenation Location</h4>
+                        <p class="card-text">Destenation description</p>
+                        <button>Remove</button>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+    </main>
+
+    
+</body>
+
+</html>

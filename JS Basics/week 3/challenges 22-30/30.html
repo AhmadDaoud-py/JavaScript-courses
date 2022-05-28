@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challange 29</title>
+    <style>
+        body{height: 3000px;}
+        .one{background-color: beige; transition: all 3s;}
+        .two{background-color: blueviolet; transition: all 3s;}
+        .three{background-color: coral; transition: all 3s;}
+        .four{background-color: cornflowerblue; transition: all 3s;}
+        .five{background-color: darkgoldenrod; transition: all 3s;}
+    </style>
+</head>
+<body class = "one">
+    <h1>Js challanges : challange 29</h1>
+    <p>Press B for beige color</p>
+    <p>Press V for blueviolet color</p>
+    <p>Press C for coral color</p>
+    <p>Press F for cornflowerblue color</p>
+    <p>Press G for darkgoldenrod color</p>
+    
+    <script>
+        var bodyTag = document.querySelector('body');
+        var keypressed;
+
+        window.addEventListener('keydown',function(event){
+            
+            keypressed = event.which;
+
+            switch(keypressed){
+                case 66: bodyTag.className = "one"; break;
+                case 86: bodyTag.className = "two"; break;
+                case 67: bodyTag.className = "three"; break;
+                case 70: bodyTag.className = "four"; break;
+                case 71: bodyTag.className = "five"; break;
+                default : alert("you didn't press one of the specific keys!")
+                
+            }
+        });
+    </script>
+</body>
+</html>

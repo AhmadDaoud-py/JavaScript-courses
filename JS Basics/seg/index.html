@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- nav bar -->
+    <nav class = "nav-bar">
+        <div class = "container">
+            <div class = "logo"><span>A</span>lgo<span>SI</span>mplified</div>
+            <div>
+                <ul class = "algos">
+                    <li><a href="javascript:void(0)" class = "algo" title="Bubble Sort" onclick="chooseAlgo(0)">BUBBLE</a></li>
+                    <li><a href="javascript:void(0)" class = "algo" onClick="chooseAlgo(1)">SELECTION</a></li>
+                    <li><a href="javascript:void(0)" class = "algo" onclick="chooseAlgo(2)">INSERTION</a></li>
+                    <li><a href="javascript:void(0)" class = "algo" onclick="chooseAlgo(3)">MERGE</a></li>
+                    <li><a href="javascript:void(0)" class = "algo" onclick="chooseAlgo(4)">QUICK</a></li>
+                    <li class = "sort-btn"><a href="javascript:void(0)" class = "algo" onclick="sort()">SORT</a></li>
+                    <li class = "generate-new-btn"><button class = "algo generate-new" onclick="createBars()">GENERATE NEW</button></li>
+                    <li ><a href="about.html" class="algo about">ABOUT</a></li>
+                
+                </ul>
+            </div>
+            
+        </div>
+        
+        
+        <div class = "analysis-btn-container">
+           <ul>
+               <li>
+                   <button class="analysis-btn" onclick="showAnalysiss();">ANALYSIS</button>  
+                </li>
+                <li><a href="about.html" onclick="chooseAlgo(4)">ABOUT</a></li>
+           </ul>
+        </div>
+        <div class = "menu-icon"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+    
+    <!-- end of nav bar -->
+    
+    <!-- Analysis popup -->
+    <div class="overlay hidden"></div>
+    <div class="analysis hidden">
+        <span class="close-analysis">X</span>
+        <div class="analysis-title"></div>
+        <div class="algorithm-code"></div>
+        <div class="analysis-explanation"></div>
+    </div>
+    <!-- The bars go here -->
+    <div class = "display-area">
+        
+    </div>
+
+    <!-- Color Codes -->
+    <div class="color-codes">
+        <p class="color-code-title" style="display:none;">Color code</p>
+        <div class = "Grid-container"></div>
+       
+    </div>
+
+    <!-- Algorithm Pseudo Code-->
+
+    <!-- <div class="algorithm-analysis"> -->
+
+        <div class="trace-code-container">
+            <div class="parse-comparison-container">
+                    <div class="parse-comparison">
+                    </div>
+                    <div class="hide-panel" id ="hide-panel1">
+                        <div class="show"></div>
+                    </div>
+            </div>
+
+            <div class="pseudo-code-container">
+                    <div class="pseudo-code">  
+                    </div>
+                    <div class="hide-panel" id ="hide-panel2">
+                        <div class="show"></div>
+                    </div>
+            </div>
+        </div>
+        
+    <!-- </div> -->
+    <div class = "service-container">
+        <div class="show-service">
+            <div class="show" id="show-input-arrow"></div>
+        </div>
+        <div class="user-defined-input">
+            <label for="user-defined">Enter your input: </label>
+            <input type="text" name="user-defined" id="user-input" placeholder="Insert comma separated....">
+            <label for="user-defined" class="user-defined">Create</label>        
+        </div>
+    </div>
+    
+    <div class="manage-speed">
+        <label for="rangeInput"> <span>Speed</span></label>
+        <input type="range" id="speed" value="0" name="rangeInput" min="0" max="100">
+    </div>
+    
+    <script src="tracecode.js"></script>
+    <script src="app.js" ></script>
+    <script src="sortingAlgorithms.js"></script>
+    <script src="visualize.js"></script>
+    <script src="analysis.js"></script>
+</body>
+</html>

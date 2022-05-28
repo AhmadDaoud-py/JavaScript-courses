@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basic Challenges: Challenge 8</title>
+</head>
+<body>
+    <h1>JavaScript Basic Challenges </h1> 
+    <h2>Bonus Challenge</h2>
+    <script>
+        var color = prompt("Enter a color : ","");
+        var primary =["red","Red","RED","yellow","Yellow","YELLOW","blue","Blue","BLUE"];
+        var secoundary = ["orange","Orange","ORANGE","green","Green","GREEN","purple","Purple","PURPLE"];
+
+        if(primary.includes(color)){
+            console.log("You picked a primary color : "+color);
+        }
+        else if(secoundary.includes(color)){
+            console.log("You picked a secoundary color : "+color);
+        }
+        else{
+            console.log("Non of these");
+        }
+
+/* 
+        var color=prompt("Enter a color :","red");
+
+color=color.toLowerCase(); // this will make color lowercase 
+var primaryColors=[
+ "red","blue","yellow", // you can add more here
+];
+
+var secondaryColors=[
+ "orange","green","purple", // you can add more here
+];
+
+
+if(primaryColors.includes(color)){
+    console.log(color+" is primary color");
+} else if(secondaryColors.includes(color)) {
+    console.log(color+" is secondary color");
+} else {
+    console.log(color+ " is neither a primary nor secondary color");
+}
+ */
+
+    </script>
+</body>
+</html>

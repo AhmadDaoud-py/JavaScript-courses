@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challange 24</title>
+</head>
+<body>
+    <h1>Js challanges : challange 23</h1>
+    <div>
+        <p>here is paragraph of text</p>
+    </div>
+    <button>Add paragraph..</button>
+    <script>
+        var addp = document.querySelector('div');
+        var btn = document.querySelector('button');
+        btn.addEventListener('click', function(){
+            var newp = document.createElement('p');
+            var newtxt = document.createTextNode("A new paragraph has been added...");
+            newp.appendChild(newtxt);
+            addp.append(newp);
+        })
+
+
+    </script>
+</body>
+</html>
